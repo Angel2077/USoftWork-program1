@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "ExtraBold";
+    src: url("../../Assets/Jost/static/Jost-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "BlackItalic";
+    src: url("../../Assets/Jost/static/Jost-BlackItalic.ttf");
+}
+
+@font-face {
+    font-family: "Italic";
+    src: url("../../Assets/Jost/static/Jost-Italic.ttf");
+}

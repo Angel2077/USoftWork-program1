@@ -1,0 +1,199 @@
+.ca {
+    margin-top: 5%;
+    width: 270px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative; 
+}
+
+.input-box {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    margin-left: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #bbb;
+    font-weight: 600;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px; /* Altura máxima para la lista */
+    overflow-y: auto; /* Habilitar desplazamiento si hay muchas sugerencias */
+    border: 1px solid #ddd; /* Bordes de la lista */
+    background: white; /* Fondo de la lista */
+    position: absolute; /* Posicionar la lista debajo del input */
+    width: 90%; /* Ancho de la lista igual al input */
+    z-index: 100; /* Asegurar que la lista esté encima de otros elementos */
+    display: none; /* Inicialmente oculta */
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+.suggestions li:hover {
+    background-color: #e0e0e0; /* Resaltar el elemento al pasar el mouse */
+}
+
+.cargar {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px; 
+    margin-left: auto;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #4444cc;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    position: relative; 
+}
+
+.cargar:hover {
+    transform: scale(1.1); 
+}
+
+.logo {
+    position: absolute;
+    bottom: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.cargar:hover .logo {
+    bottom: 5px; 
+    opacity: 1;
+}
+
+.cargar:hover .texto {
+    opacity: 0; 
+}
+
+.cargar.active .logo {
+    display: none; 
+}
+
+.cargar.active .texto {
+    opacity: 1;
+}
+
+
+
+.Disponibles, 
+.Vacaciones{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #999;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* La tabla ocupa el resto del espacio disponible */
+    position: absolute;
+    left: 21%;
+    top: 12%;
+    width: 40%;
+    border: 2px solid #fff;
+    height: 80%;
+}
+
+.Vacaciones{
+    left: 48%;
+    top: 12%;
+    width: 50%;
+}
+.encabezado{
+    font-size: 2em;
+    text-align: center;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(1px);
+}
+
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+    color: #222;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #000;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+td input[type="number"] {
+    max-width: 80px;
+    margin: auto;
+    display: block;
+}
+
+tbody tr:hover td input[type="number"] {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+th {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+td {
+    padding: 10px;
+}
+
