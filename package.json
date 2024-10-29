@@ -1,0 +1,43 @@
+{
+  "name": "personal-management",
+  "version": "0.1.0",
+  "main": "index.cjs",
+  "scripts": {
+    "start": "electronmon .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . cefam --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/iconos/logo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Cefam\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "dist": "electron-builder",
+    "package": "build"
+  },
+  "keywords": [],
+  "author": "USoftWork",
+  "license": "ISC",
+  "description": "una aplicacion que organiza el personal de una institucion",
+  "dependencies": {
+    "csv": "6.3.10"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.5",
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
+    "electronmon": "^2.0.3",
+    "standard": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.USoftWork.PM",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "productName": "Personal Management"
+}
