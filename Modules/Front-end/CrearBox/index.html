@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Cajas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="addbox.css"> 
+    <link rel="stylesheet" href="../fonts.css">
+</head>
+<body>
+    <header>
+        <h2 class="logito">Logo</h2>
+        <nav class="navegation">
+            <a href="#">Inicio</a>
+            <a href="#">Usuarios</a>
+            <a href="#">Configuración</a>
+        </nav>
+        <div class="user-info">
+            <div class="circle">
+                <img src="../../../Assets/Imagenes/Julito.jpg" alt="Usuario">
+            </div>
+            <span class="email">julio.rodriguez@gmail.com</span>
+        </div>
+    </header>      
+    <div class="gradient-background">
+        <div class="abox">
+            <div class="input-box">
+                <select id="especialidad" required>
+                    <option value="">Selecciona Especialidad</option>
+                    <option value="Médico">Médico</option>
+                    <option value="EU">EU</option>
+                    <option value="NTA">NTA</option>
+                    <option value="PS">PS</option>
+                    <option value="MAT">MAT</option>
+                    <option value="TS">TS</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <select id="turno" required>
+                    <option value="">Selecciona Turno</option>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <input id="nombre" type="text" required placeholder="Nombre">
+            </div>
+            <button class="cargar" id="boton">
+                <span class="texto">Guardar</span>
+                <ion-icon class="logo" name="add-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="container-ab">
+        </div>
+    </div>
+    <script src="agregar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
