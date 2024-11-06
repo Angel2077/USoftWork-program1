@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="addSect.css">
+    <title>Crear Sector</title>
+</head>
+<body>
+    <header>
+        <h2 class="logito">Logo</h2>
+        <nav class="navegation">
+            <a href="#">Inicio</a>
+            <a href="#">Usuarios</a>
+            <a href="#">Configuración</a>
+        </nav>
+        <div class="user-info">
+            <div class="circle">
+                <img src="../../../Assets/Imagenes/Julito.jpg" alt="User">
+            </div>
+            <span class="email">julio.rodriguez@gmail.com</span>
+        </div>
+    </header>      
+    <div class="gradient-background">
+        <div class="as">
+            <div class="input-box">
+                <input type="text" required>
+                <label>Nombre</label>
+                <div class="color-grid">
+                    <div class="color-item" data-color="red" data-name="Rojo"></div>
+                    <div class="color-item" data-color="green" data-name="Verde"></div>
+                    <div class="color-item" data-color="blue" data-name="Azul"></div>
+                    <div class="color-item" data-color="yellow" data-name="Amarillo"></div>
+                    <div class="color-item" data-color="purple" data-name="Púrpura"></div>
+                    <div class="color-item" data-color="orange" data-name="Naranja"></div>
+                    <div class="color-item" data-color="pink" data-name="Rosa"></div>
+                    <div class="color-item" data-color="cyan" data-name="Cian"></div>
+                    <div class="color-item" data-color="gray" data-name="Gris"></div>
+                </div>
+                <button class="cargar" id="boton">
+                    <span class="texto">Agregar</span>
+                    <ion-icon class="logo" name="add-outline"></ion-icon>
+                </button>
+            </div>  
+        </div>  
+        <div class="background-container"></div>
+    </div>   
+    <script src="color.js"></script>
+    <script src="agregar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -5,8 +5,6 @@ const os = require('node:os')
 
 const botonDisponibles = document.getElementById('botonDisponibles')
 const botonVacaciones = document.getElementById('botonVacaciones')
-const fechad = document.getElementsByClassName('fecha-desde')
-const fechah = document.getElementsByClassName('fecha-hasta')
 
 /*
 const textoBotonDisponibles = botonDisponibles.querySelector('.texto')
@@ -36,14 +34,14 @@ const data = fs.readdirSync(ruta)
 if (data.length !== 0) {
   data.forEach(xd => {
     const pro = new Profesional({ Rut: path.basename(xd, '.json'), Load: true, Dir: ruta })
-    database.push({ nombre: `${pro.NombreProf} ${pro.ApellidoProf}`, rut: pro.RutProf })
+    database.push({ nombre: pro.NombreProf, rut: pro.RutProf })
     if (pro.vacaciones) {
       const nuevaFila = document.createElement('tr')
       nuevaFila.id = aux
       const inicio = `F${aux.toString()}`
       const final = `L${aux.toString()}`
       nuevaFila.innerHTML = `
-            <td>${pro.NombreProf} ${pro.ApellidoProf}</td>
+            <td>${pro.NombreProf}</td>
             <td>${pro.RutProf}</td>
             <td><input type="date" class="fecha-desde" id=${inicio}></td>
             <td><input type="date" class="fecha-hasta" id=${final}></td>
@@ -53,7 +51,7 @@ if (data.length !== 0) {
     } else if ((!pro.vacaciones) && pro.vacaciones !== undefined) {
       const nuevaFila = document.createElement('tr')
       nuevaFila.innerHTML = `
-            <td>${pro.NombreProf} ${pro.ApellidoProf}</td>
+            <td>${pro.NombreProf}</td>
             <td>${pro.RutProf}</td>
         `
       tablaDisponibles.appendChild(nuevaFila) // Agregamos la fila a la tabla seleccionada
@@ -181,8 +179,4 @@ document.addEventListener('click', (event) => {
   if (!event.target.closest('.input-box')) {
     suggestionsList.style.display = 'none' // Ocultar si se hace clic fuera
   }
-})
-
-document.addEventListener('click', (event) => {
-  console.log(fechad[0].id)
 })

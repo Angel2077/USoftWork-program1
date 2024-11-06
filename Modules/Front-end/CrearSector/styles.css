@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ExtraBold';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('../../../Assets/Imagenes/Cesfam-Dark.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+.logito {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navegation {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.navegation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    position: relative;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.circle img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+}
+
+.email {
+    color: white;
+    font-size: 0.9em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.circle:hover {
+    transform: scale(1.27);
+}
+
+.circle:hover + .email {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gradient-background {
+    width: 100%;
+    height: calc(100vh - 80px); 
+    background: linear-gradient(to bottom, #000d2f, #002366);
+    position: relative;
+    top: 80px; 
+}
