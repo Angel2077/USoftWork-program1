@@ -45,6 +45,20 @@ class Disponibilidad {
       throw new Error(`El día ${dia} no es válido.`)
     }
   }
+
+  get vacaciones () {
+    return this.vacas
+  }
+
+  set vacaciones (vac) {
+    this.vacas = vac
+  }
+
+  establecerVacaciones (fechaInicio, fechaFinal) {
+    if (this.vacaciones) {
+      this.fechaVacaciones = { Inicio: fechaInicio, Final: fechaFinal }
+    }
+  }
 }
 
 module.exports = {

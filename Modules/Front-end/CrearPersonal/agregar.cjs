@@ -3,9 +3,6 @@ const fs = require('fs')
 const os = require('os')
 const { Profesional } = require('../../Back-end/Clases/Profesional.cjs')
 
-const ruta = path.join(os.homedir(), 'Cefam', 'Personal')
-const data = fs.readdirSync(ruta)
-
 const boton = document.getElementById('boton')
 const texto = document.querySelector('.texto')
 const logo = document.querySelector('.logo')
@@ -35,6 +32,9 @@ function presentarTarjeta (rut, nombre) {
   fila.appendChild(celdaRut)
   document.querySelector('#tabla tbody').appendChild(fila)
 }
+
+const ruta = path.join(os.homedir(), 'Cesfam', 'Personal')
+const data = fs.readdirSync(ruta)
 
 if (data.length !== 0) {
   data.forEach(xd => {

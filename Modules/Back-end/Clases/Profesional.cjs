@@ -71,6 +71,14 @@ class Profesional {
     this.#disponibilidad = nuevaDisponibilidad
   }
 
+  get vacaciones () {
+    return this.#disponibilidad.vacaciones
+  }
+
+  set vacaciones (vac) {
+    this.#disponibilidad.vacaciones = vac
+  }
+
   // Función para guardar los datos en JSON
   Guardar (dir) {
     const profesionalJSON = JSON.stringify({
@@ -99,6 +107,7 @@ class Profesional {
     this.#Apellido = datos.apellido
     this.#Especialidad = datos.especialidad
     this.#disponibilidad = new Disponibilidad(datos.disponibilidad) // Reconstrucción del objeto Disponibilidad
+    this.#disponibilidad.vacaciones = datos.disponibilidad.vacas
   }
 }
 

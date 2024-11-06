@@ -26,7 +26,7 @@ const database = [
   // Puedes agregar más entradas aquí
 ]
 */
-const ruta = path.join(os.homedir(), 'Cefam', 'Personal')
+const ruta = path.join(os.homedir(), 'Cesfam', 'Personal')
 const database = []
 
 const data = fs.readdirSync(ruta)
