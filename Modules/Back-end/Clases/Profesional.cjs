@@ -8,7 +8,7 @@ class Profesional {
   #Especialidad
   #disponibilidad
 
-  constructor ({ Rut = undefined, Nombre = undefined, Especialidad = undefined, disponibilidad = undefined, Load = false, Dir = undefined }) {
+  constructor ({ Rut, Nombre = undefined, Especialidad = undefined, disponibilidad = undefined, Load = false, Dir = undefined }) {
     this.#Rut = Rut
     this.#Nombre = Nombre
     this.#Especialidad = Especialidad
